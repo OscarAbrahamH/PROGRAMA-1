@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PROGRAMA_1
+{
+    class PROGRAMA
+    {
+        static void Main(string[] args)
+        {
+    
+            int[] Vector = new int[10];
+            int Variable;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Ingresa numero {0}: ", i + 1);
+                Variable = int.Parse(Console.ReadLine());
+                Vector[i] = Variable;
+            }
+            int NMax = Vector[0], NMin = Vector[0];
+            for (int i = 0; i < 10; i++)
+            {
+                if (Vector[i] > NMax)
+                {
+                    NMax = Vector[i];
+                }
+                else
+                {
+                    if (Vector[i] < NMin)
+                    {
+                        NMin = Vector[i];
+                    }
+                }
+                    
+            }
+            Console.Write("Numero Mayor: " + NMax);
+            Console.Write("Numero Menor: " + NMin);
+            Console.ReadKey();
+        }
+    }
+}
